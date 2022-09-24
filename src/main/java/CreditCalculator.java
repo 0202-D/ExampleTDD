@@ -3,15 +3,18 @@
  * DATE: 24.09.2022
  */
 public class CreditCalculator {
-    public int monthlyPaymentCalculation(int creDitSum, int numberOfMonth) {
-        return 0;
+    private int annualInterest = 18;
+
+
+    public int monthlyPaymentCalculation(int creditSum, int numberOfMonth) {
+        return creditSum / 100 * annualInterest / numberOfMonth + creditSum / numberOfMonth;
     }
 
     public int amountToBeReturnedToTheBank(int creditSum) {
-        return 0;
+        return creditSum + creditSum / 100 * annualInterest;
     }
 
     public int overpaymentForTheEntirePeriod(int creditSum) {
-        return 0;
+        return creditSum / 100 * annualInterest;
     }
 }
